@@ -4,14 +4,17 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.apollographqlrocketreserver.databinding.ActivityMainBinding
 import com.example.rocketreserver.LaunchListQuery
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         lifecycleScope.launchWhenResumed {
             val response = apolloClient.query(LaunchListQuery()).execute()

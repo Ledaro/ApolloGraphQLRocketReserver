@@ -19,13 +19,14 @@ fun apolloClient(context: Context): ApolloClient {
         return instance!!
     }
 
-    instance = ApolloClient.builder()
-        .serverUrl("https://apollo-fullstack-tutorial.herokuapp.com/graphql")
-        .okHttpClient(
-            OkHttpClient.Builder()
-                .addInterceptor(AuthorizationInterceptor(context))
-                .build()
-        )
+    val okHttpClient = OkHttpClient.Builder()
+        .addInterceptor(AuthorizationInterceptor(context))
+        .build()
+
+    instance = ApolloClient.Builder()
+        .httpServerUrl("https://apollo-fullstack-tutorial.herokuapp.com/graphql")
+        .webSocketServerUrl("wss://apollo-fullstack-tutorial.herokuapp.com/graphql")
+        .okHttpClient(okHttpClient)
         .build()
 
     return instance!!

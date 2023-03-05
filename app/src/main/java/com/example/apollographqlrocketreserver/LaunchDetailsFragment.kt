@@ -18,7 +18,7 @@ import com.example.rocketreserver.LaunchDetailsQuery
 class LaunchDetailsFragment : Fragment() {
 
     private lateinit var binding: LaunchDetailsFragmentBinding
-    val args: LaunchDetailsFragmentArgs by navArgs()
+    private val args: LaunchDetailsFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,

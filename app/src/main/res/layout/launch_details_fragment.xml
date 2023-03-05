@@ -28,7 +28,7 @@
         app:layout_constraintStart_toEndOf="@+id/missionPatch"
         app:layout_constraintTop_toTopOf="@+id/missionPatch"
         app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Mission Name"></TextView>
+        tools:text="Mission Name" />
 
     <TextView
         android:id="@+id/rocket_name"
@@ -42,7 +42,7 @@
         app:layout_constraintStart_toEndOf="@+id/missionPatch"
         app:layout_constraintTop_toBottomOf="@+id/mission_name"
         app:layout_constraintVertical_chainStyle="packed"
-        tools:text="🚀 Rocket Name"></TextView>
+        tools:text="🚀 Rocket Name" />
 
     <TextView
         android:id="@+id/site"
@@ -56,7 +56,7 @@
         app:layout_constraintLeft_toRightOf="@+id/missionPatch"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rocket_name"
-        tools:text="Site"></TextView>
+        tools:text="Site" />
 
     <Button
         android:id="@+id/book_button"

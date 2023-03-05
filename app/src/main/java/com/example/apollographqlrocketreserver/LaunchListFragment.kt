@@ -52,7 +52,7 @@ class LaunchListFragment : Fragment() {
             var cursor: String? = null
             for (item in channel) {
                 val response = try {
-                    apolloClient.query(LaunchListQuery(Optional.present(cursor))).execute()
+                    apolloClient(requireContext()).query(LaunchListQuery(Optional.present(cursor))).execute()
                 } catch (e: ApolloException) {
                     Log.d("LaunchList", "Failure", e)
                     return@launchWhenResumed

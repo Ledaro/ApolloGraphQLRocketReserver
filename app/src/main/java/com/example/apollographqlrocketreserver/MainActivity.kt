@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        lifecycleScope.launchWhenResumed {
-            val response = apolloClient.query(LaunchListQuery()).execute()
+/*        lifecycleScope.launchWhenResumed {
+            val response = apolloClient(c).query(LaunchListQuery()).execute()
 
             Log.d("LaunchList", "Success ${response.data}")
-        }
+        }*/
     }
 }
